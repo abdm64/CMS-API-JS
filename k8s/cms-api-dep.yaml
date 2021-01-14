@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cms-api-dep 
+  namespace: cms-api-namespace
+spec: 
+  replicas: 2
+  selector: 
+    matchLabels:
+        component: cms-api
+  template: 
+    metadata:
+      labels: 
+        component: cms-api
+    spec:
+      containers: 
+      - name: cms-api-dte 
+        image: dmp-api-k8s-registry.com:443/dnbo-dte-api:v0.0.6 #abdm6464/dte-dnbo:V0.0.8
+        imagePullPolicy: IfNotPresent 
+        ports: 
+        - containerPort: 3000 
+        
+          
+          
+
+          
