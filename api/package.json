@@ -4,7 +4,7 @@
   "description": "api for cms ",
   "main": "app.js",
   "scripts": {
-    "start:dev": "nodemon --tls-min-v1.0 src/app.js"
+    "start:dev": "nodemon  src/app.js"
   },
   "keywords": [
     "sql",
@@ -20,7 +20,7 @@
     "express": "^4.17.1",
     "moment": "^2.29.1",
     "mssql": "^6.3.1",
-    "sequelize": "^6.3.5",
+    "sequelize": "5.3.5",
     "tedious": "^9.2.3"
   }
 }

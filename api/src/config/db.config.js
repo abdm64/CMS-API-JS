@@ -19,14 +19,6 @@ module.exports = new Sequelize(
      pass , {
     host: host ,
     dialect:  'mssql' ,
-    dialectOptions: {
-        options: {
-            encrypt: true,
-            
-        }
-        
-        
-    },
     logging: false
   });
 

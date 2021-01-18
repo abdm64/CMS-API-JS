@@ -2,7 +2,7 @@
 
 
 exports.checkValue = (reqBody) =>{
-if ( reqBody.msisdn === undefined || reqBody.triggerId === undefined || reqBody.triggerDescription === undefined){
+if ( reqBody.msisdn === undefined || reqBody.partner=== undefined || reqBody.data === undefined || reqBody.transaction === undefined  ){
 
 
     return false

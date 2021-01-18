@@ -20,12 +20,12 @@ app.use((req, res, next) => {
 
 
 //ROUTES
-app.get('/dte-partner/api',(req,res) =>{
+app.get('/dte-cms/api',(req,res) =>{
 
   res.send('hello world')
 })
 
-app.use('/dte-partner/api/v1', require('./routes/partnerRoute'))
+app.use('/dte-cms/api/v1', require('./routes/partnerRoute'))
 
 
 
@@ -38,7 +38,7 @@ app.use('/dte-partner/api/v1', require('./routes/partnerRoute'))
     console.log('database connected ...')
     app.listen(port,()=> {
 
-      console.log("app listen on port: "+ port)
+      console.log("CMS API  listen on port:"+ port)
     }); //DEF in docker.compose.yml
   } catch (error) {
     console.log("err" + error);

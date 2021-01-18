@@ -42,7 +42,7 @@ const Partner = db.define('Partner', {
   },
 
   notificationTime: {
-    type: Sequelize.DATE,
+    type: DataTypes.DATEONLY ,
     allowNull: true   
   },
  id: {
