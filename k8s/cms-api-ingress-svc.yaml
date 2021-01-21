@@ -3,7 +3,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: cms-api-ingress-svc
-  namespace: cms-api-namespace
+  namespace: cms-prod
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/use-regex: 'true'
@@ -11,7 +11,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /dte-partner/?(.*)
+          - path: /dte-cms/?(.*)
             backend:
               serviceName: cms-api-svc
               servicePort: 3000

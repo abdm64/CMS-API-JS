@@ -71,10 +71,10 @@ exports.createPartner = async (req, res, next) => {
 };
 
 exports.getAll = async (req, res, next) => {
-	console.log("getAll: [GET] /Partner/");
+//	console.log("getAll: [GET] /Partner/");
 	try {
 		const ALL = await Partner.findAll();
-		console.log(ALL.length)
+		
 		
 		return res.status(200).json(ALL);
 	} catch (error) {

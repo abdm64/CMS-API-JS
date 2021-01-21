@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cms-dep-test
+  namespace: cms-test
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels:
+        component: cms-api-test 
+  template: 
+    metadata:
+      labels: 
+        component: cms-api-test 
+    spec:
+      containers: 
+      - name: cms-dte-test 
+        image:   dmp-api-k8s-registry.com:443/dte-cms-api:v0.0.1 # abdm6464/dte-dnbo:V0.0.8
+        imagePullPolicy: IfNotPresent 
+        ports: 
+        - containerPort: 3000 
+        # env:  
+        #   - name: DBSS_API
+        #     value: https://10.96.35.2:3300
+        
+          
+---
+
+apiVersion: v1
+kind: Service
+metadata: 
+    name: cms-test-svc
+    namespace: cms-test
+spec: 
+  type: LoadBalancer
+  ports: 
+    - port: 3000 
+      targetPort: 3000 
+      nodePort: 31520
+  selector: 
+    component: cms-api-test 
+          
