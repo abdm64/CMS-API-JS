@@ -81,7 +81,7 @@ npm start
 
 ## Deployment Architecture <a name = "dep-archi"></a>
 
-- ![Alt text](./images/Ether-deploy.PNG?raw=true "Title")
+- ![Alt text](./images/deploy-cms-dte.PNG?raw=true "Title")
 
 ## Deployment Architecture Explained <a name = "dep-exp"></a>
 
