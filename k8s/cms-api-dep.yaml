@@ -15,7 +15,7 @@ spec:
     spec:
       containers: 
       - name: cms-api-dte 
-        image: dmp-api-k8s-registry.com:443/cms-dte-api:v0.0.1 #abdm6464/dte-dnbo:V0.0.8
+        image: dmp-api-k8s-registry.com:443/dte-cms-api:v0.0.1 #abdm6464/dte-dnbo:V0.0.8
         imagePullPolicy: IfNotPresent 
         ports: 
         - containerPort: 3000 

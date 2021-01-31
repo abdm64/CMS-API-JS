@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  cms-dte:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+  nginx-cms:
+     build:
+      context: ./nginx
+      dockerfile: Dockerfile
+     ports:
+        - "80:80" 
+     
